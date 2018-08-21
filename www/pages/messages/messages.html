@@ -1,0 +1,52 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="title">Özel Mesajlar</div>
+            <div class="right">
+                <a href="/create-draft/" class="link icon-only">
+                    <i class="f7-icons ios-only">compose</i>
+                    <i class="material-icons md-only">create</i>
+                </a>
+                <a href="/bulk-message/" class="link icon-only">
+                    <i class="f7-icons ios-only">email</i>
+                    <i class="material-icons md-only">mail_outlined</i>
+                </a>
+                <a class="link icon-only searchbar-enable" data-searchbar=".searchbar.messages">
+                    <i class="icon f7-icons ios-only">search</i>
+                    <i class="icon material-icons md-only">search</i>
+                </a>
+            </div>
+            <form class="searchbar messages searchbar-expandable searchbar-init" data-search-container=".tab" data-search-in=".item-title">
+                <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                        <input id="messagesSearchInput" type="search" placeholder="Etikete göre ara..." />
+                        <i class="searchbar-icon"></i>
+                        <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button">İptal</span>
+                </div>
+            </form>
+            <div class="subnavbar">
+                <div class="subnavbar-inner">
+                    <div class="segmented">
+                        <a href="./" class="button tab-link tab-link-active no-text-transform" data-route-tab-id="customMessages">
+                            <i class="icon f7-icons ios-only">chat</i>
+                            <i class="icon material-icons md-only">chat_bubble</i>
+                            <span class="tabTitle">Özel</span>
+                        </a>
+                        <a href="incoming-messages/" class="button tab-link no-text-transform" data-route-tab-id="incomingMessages">
+                            <i class="icon f7-icons ios-only">chats</i>
+                            <i class="icon material-icons md-only">forum</i>
+                            <span class="tabTitle">Gelen</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs tabs-routable">
+        <div class="page-content tab hide-navbar-on-scroll" id="customMessages"></div>
+        <div class="page-content tab hide-navbar-on-scroll" id="incomingMessages"></div>
+    </div>
+</div>

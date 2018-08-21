@@ -1,0 +1,155 @@
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="ios-only">Geri</span>
+                </a>
+            </div>
+            <div class="title">Yeni Etkinlik</div>
+        </div>
+    </div>
+    <div class="fab fab-extended fab-center-bottom">
+        <a href="create-activity-tag/">
+            <i class="f7-icons ios-only">add</i>
+            <i class="material-icons md-only">add</i>
+            <div class="fab-text">Etiket Ekle</div>
+        </a>
+    </div>
+    <div class="page-content">
+        <form id="createActivity" class="list no-hairlines">
+            <ul>
+                <li class="item-content item-input">
+                    <div class="item-media">
+                        <i class="icon f7-icons ios-only color-purple">tags</i>
+                        <i class="icon material-icons md-only color-purple">label</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title item-label">Etiket</div>
+                        <div class="item-input-wrap">
+                            <select placeholder="Etiket şeç...">
+                                <option value="kandil">Kandil</option>
+                                <option value="annelerGunu">Anneler Günü</option>
+                                <option value="babalarGunu">Babalar Günü</option>
+                                <option value="sevgililerGunu">Sevgililer Günü</option>
+                                <option value="ramazanBayrami">Ramazan Bayramı</option>
+                                <option value="kurbanBayrami">Kurban Bayramı</option>
+                                <option value="dogumGunu">Doğum Günü</option>
+                                <option value="ogretmenlerGunu">Öğretmenler Günü</option>
+                                <option value="yilbasi">Yılbaşı</option>
+                                <option value="evlilikYilDonumu">Evlilik Yıl Dönümü</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="item-link smart-select persons" data-searchbar="true" data-searchbar-placeholder="Kişi ara...">
+                        <select name="persons" multiple required validate data-error-message="Bu alan boş bırakılamaz!">
+                            <optgroup label="Çevre">    
+                                <option value="arkadas">Arkadaş</option>
+                                <option value="aile">Aile</option>
+                                <option value="anne">Anne</option>
+                                <option value="Baba">Baba</option>
+                                <option value="arkadas">Akraba</option>
+                                <option value="aile">Eğitmen</option>
+                                <option value="anne">Dost</option>
+                                <option value="Baba">Tanıdık</option>
+                                <option value="Baba">Sevgili/Eş</option>    
+                            </optgroup>
+                            <optgroup label="A">
+                                <option value="aaron" selected>Aaron</option>
+                                <option value="abbie">Abbie</option>
+                                <option value="adam">Adam</option>
+                                <option value="adele">Adele</option>
+                                <option value="agatha">Agatha</option>
+                                <option value="agnes">Agnes</option>
+                                <option value="albert">Albert</option>
+                                <option value="alexander">Alexander</option>
+                            </optgroup>
+                            <optgroup label="B">
+                                <option value="bailey" selected>Bailey</option>
+                                <option value="barclay">Barclay</option>
+                                <option value="bartolo">Bartolo</option>
+                                <option value="bellamy">Bellamy</option>
+                                <option value="belle">Belle</option>
+                                <option value="benjamin">Benjamin</option>
+                            </optgroup>
+                            <optgroup label="C">
+                                <option value="caiden">Caiden</option>
+                                <option value="calvin">Calvin</option>
+                                <option value="candy">Candy</option>
+                                <option value="carl" selected>Carl</option>
+                                <option value="cherilyn">Cherilyn</option>
+                                <option value="chester">Chester</option>
+                                <option value="chloe" selected>Chloe</option>
+                            </optgroup>
+                            <optgroup label="V">
+                                <option value="vladimir">Vladimir</option>
+                            </optgroup>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-media">
+                                <i class="icon f7-icons ios-only color-purple">person</i>
+                                <i class="icon material-icons md-only color-purple">person</i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Kişi/Çevre</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="item-content">
+                    <div class="item-media">
+                        <i class="icon f7-icons ios-only color-purple hasAllPersons--icon">person</i>
+                        <i class="icon material-icons md-only color-purple hasAllPersons--icon">person</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title hasAllPersons--title">Tüm kişiler</div>
+                        <div class="item-after">
+                            <span class="hasAllPersons--help">Tüm kişiler &nbsp;</span>
+                            <label class="link toggle hasAllPersons">
+                                <input type="checkbox" name="hasAllPersons" value="yes" checked>
+                                <span class="toggle-icon"></span>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content item-input">
+                    <div class="item-media">
+                        <i class="icon f7-icons ios-only color-purple">calendar</i>
+                        <i class="icon material-icons md-only color-purple">insert_invitation</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title item-label">Tarih</div>
+                        <div class="item-input-wrap">
+                            <input type="date" name="cron" placeholder="Tarih gir..." required validate data-error-message="Bu alan boş bırakılamaz!">
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content">
+                    <div class="item-media">
+                        <i class="icon f7-icons ios-only color-purple">reload</i>
+                        <i class="icon material-icons md-only color-purple">repeat</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title">Her yıl tekrarlansın</div>
+                        <div class="item-after">
+                            <label class="link toggle hasRepeat">
+                                    <input type="checkbox" name="hasRepeat" value="yes">
+                                    <span class="toggle-icon"></span>
+                                </label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="block">
+                <button type="submit" class="button button-fill button-raised color-green">Tamam</button>
+            </div>
+        </form>
+
+        <div class="block">
+            Girilen tarihte ayarlanan etiket ve kişi/çevre seçimine göre mesaj gönderilir. Bu etkinliğin her yıl tekrarlanmasını istiyorsanız <u>"Her yıl tekrarlansın"</u> seçeneğini seçmelisiniz. Etkinlikler <a href="/">ana sayfa</a>da listelenmektedir.
+        </div>
+    </div>
+</div>
