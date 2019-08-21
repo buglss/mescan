@@ -2,6 +2,7 @@ import "../sass/mescan.sass"
 import "../less/mescan.less"
 import "framework7-icons/css/framework7-icons.css"
 import "material-design-icons/iconfont/material-icons.css"
+import db from "./db.js"
 import routes from "./routes.js"
 import Framework7, { Dom7 } from 'framework7'
 import Fab from "framework7/components/fab/fab.js"
@@ -49,9 +50,9 @@ let app = new Framework7({
         pageInit() {
             $$('.confirmDelete').on('click', function() {
                 app.dialog.confirm('Silmek istediğinize emin misiniz?', "Dikkat!!!", function() {
-                    app.dialog.alert('Başarılı!');
-                });
-            });
+                    app.dialog.alert('Başarılı!')
+                })
+            })
         }
     }
 })
@@ -81,3 +82,7 @@ app.views.create('#view-status', {
 app.views.create('#view-messages', {
     url: '/messages/'
 })
+
+document.addEventListener("deviceready", () => {
+    db()
+}, false)

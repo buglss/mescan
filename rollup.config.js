@@ -19,7 +19,7 @@ export default [{
         resolve(),
         commonjs(),
         buble({
-            exclude: ["src/sass/**", "src/less/**", "node_modules/framework7/css/**", "node_modules/framework7-icons/css/**", "node_modules/material-design-icons/iconfont/**"]
+            exclude: ["src/sass/**", "src/less/**", "src/secret/**", "node_modules/framework7/css/**", "node_modules/framework7-icons/css/**", "node_modules/material-design-icons/iconfont/**"]
         }),
         production && uglify(),
         postcss({

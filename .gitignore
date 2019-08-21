@@ -1,4 +1,4 @@
-
+.DS_Store
 www/css/
 www/js/
 www/fonts/
@@ -6,3 +6,4 @@ plugins/
 platforms/
 node_modules/
 package-lock.json
+src/secret/

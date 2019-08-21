@@ -50,6 +50,7 @@
     </platform>
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <preference name="StatusBarStyle" value="lightcontent" />
-    <engine name="android" spec="^7.0.0" />
     <plugin name="cordova-sqlite-storage" spec="^2.4.0" />
+    <engine name="android" spec="~7.0.0" />
+    <plugin name="com.cordova.plugin.firebase.admin" spec="../Plugins/FirebaseAdmin" />
 </widget>
