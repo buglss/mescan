@@ -1,11 +1,11 @@
 import React from "react";
 import { View, FlatList, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 
-const Item = ({ name, photo, count, date, navigation }) => (
+const Item = ({ name, photo, count, date, navigation, dispatch, activitieId }) => (
     <View style={styles.listItem}>
         <Image source={photo} style={{ width: 60, height: 60, borderRadius: 30, marginEnd: 10 }} />
         <View style={{ alignItems: "stretch", flex: 1, justifyContent: "center" }}>
-            <TouchableOpacity style={{ justifyContent: "center", alignItems: "center", flex: 1 }} onPress={() => navigation.navigate('Detay')}>
+            <TouchableOpacity style={{ justifyContent: "center", alignItems: "center", flex: 1 }} onPress={(e) => (dispatch({ type: "get", activitieId }), navigation.navigate("Detay"))}>
                 <Text style={{ fontWeight: "bold" }}>{name}</Text>
                 <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
                     <Text style={styles.subItem}>{count}</Text>
@@ -17,16 +17,16 @@ const Item = ({ name, photo, count, date, navigation }) => (
     </View>
 );
 
-const renderItem = ({ item }, navigation) => (
-    <Item {...item} navigation={navigation} />
+const renderItem = ({ item }, navigation, dispatch) => (
+    <Item {...item} navigation={navigation} dispatch={dispatch} />
 );
 
-const GenericList = ({ data, navigation }) => {
+const GenericList = ({ data, navigation, dispatch }) => {
     return (
         <FlatList
             style={{ flex: 1 }}
             data={data}
-            renderItem={(item) => renderItem(item, navigation)}
+            renderItem={(item) => renderItem(item, navigation, dispatch)}
             keyExtractor={item => item.id}
         />
     );

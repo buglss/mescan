@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react"
 import { StyleSheet, SafeAreaView } from "react-native";
 import GenericList from "../components/GenericList";
 import DATA from "../../storage/db"
+import { ActivitiesContext } from "../contexts/ActivitiesContext"
 
 const Home = ({ navigation }) => {
+    const { jobs, activitieDispatch } = useContext(ActivitiesContext)
+
     return (
         <SafeAreaView style={styles.container}>
-            <GenericList data={DATA} navigation={navigation} />
+            <GenericList data={jobs} navigation={navigation} dispatch={activitieDispatch} />
         </SafeAreaView>
     );
 }
