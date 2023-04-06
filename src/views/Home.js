@@ -1,25 +1,19 @@
 import React, { useContext } from "react"
 import { StyleSheet, SafeAreaView } from "react-native";
 import GenericList from "../components/GenericList";
-import DATA from "../../storage/db"
 import { ActivitiesContext } from "../contexts/ActivitiesContext"
+import ContainerStyle from "../styles/ContainerStyle";
 
 const Home = ({ navigation }) => {
     const { jobs, activitieDispatch } = useContext(ActivitiesContext)
 
     return (
         <SafeAreaView style={styles.container}>
-            <GenericList data={jobs} navigation={navigation} dispatch={activitieDispatch} />
+            <GenericList data={jobs} navigation={navigation} dispatch={activitieDispatch} route={"Aktiviteler"} />
         </SafeAreaView>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#F7F7F7",
-        marginTop: 0
-    }
-});
+const styles = StyleSheet.flatten([ContainerStyle]);
 
 export default Home;

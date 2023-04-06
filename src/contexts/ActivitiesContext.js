@@ -5,18 +5,17 @@ console.log("jobs", jobsData)
 const ActivitiesContext = createContext()
 
 const ActivitiesContextProvider = ({ children }) => {
-    // const [input, setInput] = useState("")
     const [jobs, jobDispatch] = useReducer((state, action) => {
         switch(action.type) {
             default:
                 return state
         }
     }, jobsData)
-    const orgState = activitiesData
+    const _activities = activitiesData
     const [activities, activitieDispatch] = useReducer((state, action) => {
         switch(action.type) {
             case "get":
-                return orgState.filter(activitie => activitie.activitieId === action.activitieId)
+                return _activities.filter(activitie => activitie.activitieId === action.activitieId)
             default:
                 return state
         }
